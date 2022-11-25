@@ -1,5 +1,3 @@
-let somethingWentWrong = false;
-
 function categoryMonitoringPromise(){
     return new Promise((resolve,reject)=>{
         try{
