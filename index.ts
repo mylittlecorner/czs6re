@@ -2,7 +2,6 @@ function categoryMonitoringPromise(){
     return new Promise((resolve,reject)=>{
         try{
             for(let i=0;i<999;i++){
-                throw new Error('Nothing special');
             }
             resolve({
                 name: 'Category Status',
@@ -17,16 +16,15 @@ function categoryMonitoringPromise(){
     })
 }
 
-/*class MessageContainer{
+class MessageContainer{
     name: any
     msg: any
-}*/
-
-async function categoryMonitoringPromiseTest(){
-    let result = await categoryMonitoringPromise();
-    document.getElementById('sth').innerText= JSON.stringify(result);
 }
 
+const categoryMonitoringPromiseTest = async() =>{
+   return await categoryMonitoringPromise();
+}
+console.log(categoryMonitoringPromiseTest());
 
 /*
 categoryMonitoringPromise().then((message: MessageContainer)=>{
